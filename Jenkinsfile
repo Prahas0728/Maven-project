@@ -26,7 +26,7 @@ pipeline {
 
             steps {
 
-                dir('rock-paper-scissor') {
+                dir('rock-paper-scissors') {
 
                     sh 'mvn clean compile'
 
@@ -40,7 +40,7 @@ pipeline {
 
             steps {
 
-                dir('rock-paper-scissor') {
+                dir('rock-paper-scissors') {
 
                     sh 'mvn package'
 
