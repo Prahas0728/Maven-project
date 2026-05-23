@@ -11,15 +11,16 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+       stage('Checkout') {
 
-            steps {
+    steps {
 
-                git 'https://github.com/Prahas0728/Maven-project.git'
+        git branch: 'main',
+        url: 'https://github.com/Prahas0728/Maven-project.git'
 
-            }
+    }
 
-        }
+}
 
         stage('Build') {
 
