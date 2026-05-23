@@ -11,16 +11,16 @@ pipeline {
 
     stages {
 
-       stage('Checkout') {
+        stage('Checkout') {
 
-    steps {
+            steps {
 
-        git branch: 'main',
-        url: 'https://github.com/Prahas0728/Maven-project.git'
+                git branch: 'main',
+                url: 'https://github.com/Prahas0728/Maven-project.git'
 
-    }
+            }
 
-}
+        }
 
         stage('Build') {
 
@@ -51,22 +51,25 @@ pipeline {
         }
 
     }
-}
-post {
 
-    success {
+    post {
 
-        mail to: 'YOUR_EMAIL@gmail.com',
-        subject: 'Jenkins Build Success',
-        body: 'Rock Paper Scissors project built successfully.'
+        success {
+
+            mail to: 'YOUR_EMAIL@gmail.com',
+            subject: 'Jenkins Build Success',
+            body: 'Rock Paper Scissors project built successfully.'
+
+        }
+
+        failure {
+
+            mail to: 'YOUR_EMAIL@gmail.com',
+            subject: 'Jenkins Build Failed',
+            body: 'Build failed. Check Jenkins logs.'
+
+        }
 
     }
 
-    failure {
-
-        mail to: 'vvce23ise@vvce.ac.in',
-        subject: 'Jenkins Build Failed',
-        body: 'Build failed. Check Jenkins logs.'
-
-    }
 }
