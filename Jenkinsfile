@@ -52,3 +52,21 @@ pipeline {
 
     }
 }
+post {
+
+    success {
+
+        mail to: 'YOUR_EMAIL@gmail.com',
+        subject: 'Jenkins Build Success',
+        body: 'Rock Paper Scissors project built successfully.'
+
+    }
+
+    failure {
+
+        mail to: 'vvce23ise@vvce.ac.in',
+        subject: 'Jenkins Build Failed',
+        body: 'Build failed. Check Jenkins logs.'
+
+    }
+}
