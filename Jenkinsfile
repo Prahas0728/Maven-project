@@ -56,7 +56,7 @@ pipeline {
 
         success {
 
-            mail to: 'YOUR_EMAIL@gmail.com',
+            mail to: 'nandan56562@gmail.com',
             subject: 'Jenkins Build Success',
             body: 'Rock Paper Scissors project built successfully.'
 
@@ -64,7 +64,7 @@ pipeline {
 
         failure {
 
-            mail to: 'YOUR_EMAIL@gmail.com',
+            mail to: 'nandan56562@gmail.com',
             subject: 'Jenkins Build Failed',
             body: 'Build failed. Check Jenkins logs.'
 
